@@ -5,8 +5,6 @@ import Dashboard from "views/Dashboard/Dashboard.js";
 import ErrorPage from "views/Pages/ErrorPage.js";
 import ExtendedForms from "views/Forms/ExtendedForms.js";
 import ExtendedTables from "views/Tables/ExtendedTables.js";
-import FullScreenMap from "views/Maps/FullScreenMap.js";
-import GoogleMaps from "views/Maps/GoogleMaps.js";
 import GridSystem from "views/Components/GridSystem.js";
 import Icons from "views/Components/Icons.js";
 import LockScreenPage from "views/Pages/LockScreenPage.js";
@@ -24,7 +22,7 @@ import TimelinePage from "views/Pages/Timeline.js";
 import Typography from "views/Components/Typography.js";
 import UserProfile from "views/Pages/UserProfile.js";
 import ValidationForms from "views/Forms/ValidationForms.js";
-import VectorMap from "views/Maps/VectorMap.js";
+import Ordenes from "views/Ordenes/index.js";
 import Widgets from "views/Widgets/Widgets.js";
 import Wizard from "views/Forms/Wizard.js";
 
@@ -45,11 +43,11 @@ var dashRoutes = [
     rtlName: "لوحة القيادة",
     icon: DashboardIcon,
     component: Dashboard,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     collapse: true,
-    name: "Pages",
+    name: "Configuracion",
     rtlName: "صفحات",
     icon: Image,
     state: "pageCollapse",
@@ -61,7 +59,7 @@ var dashRoutes = [
         mini: "PP",
         rtlMini: "ع",
         component: PricingPage,
-        layout: "/auth"
+        layout: "/auth",
       },
       {
         path: "/rtl-support-page",
@@ -70,7 +68,7 @@ var dashRoutes = [
         mini: "RS",
         rtlMini: "صو",
         component: RTLSupport,
-        layout: "/rtl"
+        layout: "/rtl",
       },
       {
         path: "/timeline-page",
@@ -79,7 +77,7 @@ var dashRoutes = [
         mini: "T",
         rtlMini: "تي",
         component: TimelinePage,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/login-page",
@@ -88,7 +86,7 @@ var dashRoutes = [
         mini: "L",
         rtlMini: "هعذا",
         component: LoginPage,
-        layout: "/auth"
+        layout: "/auth",
       },
       {
         path: "/register-page",
@@ -97,7 +95,7 @@ var dashRoutes = [
         mini: "R",
         rtlMini: "صع",
         component: RegisterPage,
-        layout: "/auth"
+        layout: "/auth",
       },
       {
         path: "/lock-screen-page",
@@ -106,7 +104,7 @@ var dashRoutes = [
         mini: "LS",
         rtlMini: "هذاع",
         component: LockScreenPage,
-        layout: "/auth"
+        layout: "/auth",
       },
       {
         path: "/user-page",
@@ -115,7 +113,7 @@ var dashRoutes = [
         mini: "UP",
         rtlMini: "شع",
         component: UserProfile,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/error-page",
@@ -124,13 +122,13 @@ var dashRoutes = [
         mini: "E",
         rtlMini: "البريد",
         component: ErrorPage,
-        layout: "/auth"
-      }
-    ]
+        layout: "/auth",
+      },
+    ],
   },
   {
     collapse: true,
-    name: "Components",
+    name: "Catalogo",
     rtlName: "المكونات",
     icon: Apps,
     state: "componentsCollapse",
@@ -150,9 +148,9 @@ var dashRoutes = [
             mini: "B",
             rtlMini: "ب",
             component: Buttons,
-            layout: "/admin"
-          }
-        ]
+            layout: "/admin",
+          },
+        ],
       },
       {
         path: "/buttons",
@@ -161,7 +159,7 @@ var dashRoutes = [
         mini: "B",
         rtlMini: "ب",
         component: Buttons,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/grid-system",
@@ -170,7 +168,7 @@ var dashRoutes = [
         mini: "GS",
         rtlMini: "زو",
         component: GridSystem,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/panels",
@@ -179,7 +177,7 @@ var dashRoutes = [
         mini: "P",
         rtlMini: "ع",
         component: Panels,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/sweet-alert",
@@ -188,7 +186,7 @@ var dashRoutes = [
         mini: "SA",
         rtlMini: "ومن",
         component: SweetAlert,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/notifications",
@@ -197,7 +195,7 @@ var dashRoutes = [
         mini: "N",
         rtlMini: "ن",
         component: Notifications,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/icons",
@@ -206,7 +204,7 @@ var dashRoutes = [
         mini: "I",
         rtlMini: "و",
         component: Icons,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/typography",
@@ -215,13 +213,13 @@ var dashRoutes = [
         mini: "T",
         rtlMini: "ر",
         component: Typography,
-        layout: "/admin"
-      }
-    ]
+        layout: "/admin",
+      },
+    ],
   },
   {
     collapse: true,
-    name: "Forms",
+    name: "Envios",
     rtlName: "إستمارات",
     icon: "content_paste",
     state: "formsCollapse",
@@ -233,7 +231,7 @@ var dashRoutes = [
         mini: "RF",
         rtlMini: "صو",
         component: RegularForms,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/extended-forms",
@@ -242,7 +240,7 @@ var dashRoutes = [
         mini: "EF",
         rtlMini: "هوو",
         component: ExtendedForms,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/validation-forms",
@@ -251,7 +249,7 @@ var dashRoutes = [
         mini: "VF",
         rtlMini: "تو",
         component: ValidationForms,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/wizard",
@@ -260,13 +258,13 @@ var dashRoutes = [
         mini: "W",
         rtlMini: "ث",
         component: Wizard,
-        layout: "/admin"
-      }
-    ]
+        layout: "/admin",
+      },
+    ],
   },
   {
     collapse: true,
-    name: "Tables",
+    name: "Inventarios",
     rtlName: "الجداول",
     icon: GridOn,
     state: "tablesCollapse",
@@ -278,7 +276,7 @@ var dashRoutes = [
         mini: "RT",
         rtlMini: "صر",
         component: RegularTables,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/extended-tables",
@@ -287,7 +285,7 @@ var dashRoutes = [
         mini: "ET",
         rtlMini: "هور",
         component: ExtendedTables,
-        layout: "/admin"
+        layout: "/admin",
       },
       {
         path: "/react-tables",
@@ -296,69 +294,40 @@ var dashRoutes = [
         mini: "RT",
         rtlMini: "در",
         component: ReactTables,
-        layout: "/admin"
-      }
-    ]
+        layout: "/admin",
+      },
+    ],
   },
   {
-    collapse: true,
-    name: "Maps",
-    rtlName: "خرائط",
+    path: "/ordenes",
+    name: "Ordenes",
     icon: Place,
-    state: "mapsCollapse",
-    views: [
-      {
-        path: "/google-maps",
-        name: "Google Maps",
-        rtlName: "خرائط جوجل",
-        mini: "GM",
-        rtlMini: "زم",
-        component: GoogleMaps,
-        layout: "/admin"
-      },
-      {
-        path: "/full-screen-maps",
-        name: "Full Screen Map",
-        rtlName: "خريطة كاملة الشاشة",
-        mini: "FSM",
-        rtlMini: "ووم",
-        component: FullScreenMap,
-        layout: "/admin"
-      },
-      {
-        path: "/vector-maps",
-        name: "Vector Map",
-        rtlName: "خريطة المتجه",
-        mini: "VM",
-        rtlMini: "تم",
-        component: VectorMap,
-        layout: "/admin"
-      }
-    ]
+    component: Ordenes,
+    layout: "/admin",
   },
   {
     path: "/widgets",
-    name: "Widgets",
+    name: "Reportes",
     rtlName: "الحاجيات",
     icon: WidgetsIcon,
     component: Widgets,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/charts",
-    name: "Charts",
+    name: "Informacion Fiscal",
     rtlName: "الرسوم البيانية",
     icon: Timeline,
     component: Charts,
-    layout: "/admin"
+    layout: "/admin",
   },
   {
     path: "/calendar",
-    name: "Calendar",
+    name: "Omnicanal",
     rtlName: "التقويم",
     icon: DateRange,
     component: Calendar,
-    layout: "/admin"
-  }
+    layout: "/admin",
+  },
 ];
 export default dashRoutes;
