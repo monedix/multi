@@ -27,7 +27,7 @@ const useStyles = makeStyles(styles);
 export default function LoginPage() {
   const [cardAnimaton, setCardAnimation] = React.useState("cardHidden");
   React.useEffect(() => {
-    let id = setTimeout(function() {
+    let id = setTimeout(function () {
       setCardAnimation("");
     }, 700);
     // Specify how to clean up after this effect:
@@ -51,7 +51,7 @@ export default function LoginPage() {
                   {[
                     "fab fa-facebook-square",
                     "fab fa-twitter",
-                    "fab fa-google-plus"
+                    "fab fa-google-plus",
                   ].map((prop, key) => {
                     return (
                       <Button
@@ -71,35 +71,35 @@ export default function LoginPage() {
                   labelText="First Name.."
                   id="firstname"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                   inputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
                         <Face className={classes.inputAdornmentIcon} />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                 />
                 <CustomInput
                   labelText="Email..."
                   id="email"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                   inputProps={{
                     endAdornment: (
                       <InputAdornment position="end">
                         <Email className={classes.inputAdornmentIcon} />
                       </InputAdornment>
-                    )
+                    ),
                   }}
                 />
                 <CustomInput
                   labelText="Password"
                   id="password"
                   formControlProps={{
-                    fullWidth: true
+                    fullWidth: true,
                   }}
                   inputProps={{
                     endAdornment: (
@@ -110,7 +110,7 @@ export default function LoginPage() {
                       </InputAdornment>
                     ),
                     type: "password",
-                    autoComplete: "off"
+                    autoComplete: "off",
                   }}
                 />
               </CardBody>

@@ -18,16 +18,16 @@ export default function Footer(props) {
   var container = cx({
     [classes.container]: !fluid,
     [classes.containerFluid]: fluid,
-    [classes.whiteColor]: white
+    [classes.whiteColor]: white,
   });
   var anchor =
     classes.a +
     cx({
-      [" " + classes.whiteColor]: white
+      [" " + classes.whiteColor]: white,
     });
   var block = cx({
     [classes.block]: true,
-    [classes.whiteColor]: white
+    [classes.whiteColor]: white,
   });
   return (
     <footer className={classes.footer}>
@@ -36,22 +36,7 @@ export default function Footer(props) {
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>
               <a href="#home" className={block}>
-                {rtlActive ? "الصفحة الرئيسية" : "Home"}
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#company" className={block}>
-                {rtlActive ? "شركة" : "Company"}
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#portfolio" className={block}>
-                {rtlActive ? "بعدسة" : "Portfolio"}
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a href="#blog" className={block}>
-                {rtlActive ? "مدونة" : "Blog"}
+                {"Realvirtual"}
               </a>
             </ListItem>
           </List>
@@ -59,15 +44,15 @@ export default function Footer(props) {
         <p className={classes.right}>
           &copy; {1900 + new Date().getYear()}{" "}
           <a
-            href="https://www.creative-tim.com?ref=mdpr-footer"
+            href="https://realvirtual.com.mx"
             className={anchor}
             target="_blank"
           >
-            {rtlActive ? "توقيت الإبداعية" : "Creative Tim"}
+            {"MultiOMS"}
           </a>
           {rtlActive
             ? ", مصنوعة مع الحب لشبكة الإنترنت أفضل"
-            : ", made with love for a better web"}
+            : ", hecho con amor"}
         </p>
       </div>
     </footer>
@@ -77,5 +62,5 @@ export default function Footer(props) {
 Footer.propTypes = {
   fluid: PropTypes.bool,
   white: PropTypes.bool,
-  rtlActive: PropTypes.bool
+  rtlActive: PropTypes.bool,
 };
